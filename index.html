@@ -1,60 +1,220 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
   <head>
- <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-     <meta http-equiv="Pragma" content="no-cache"/>
-     <meta http-equiv="Expires" content="0"/>
+
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../../../favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>New Age - Start Bootstrap Theme</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+
+    <style> 
+	@font-face {
+    	font-family: JosefinSans;
+    	src: url(JosefinSans-SemiBold.woff);
+    	font-weight: 600;
+	}
+
+	@font-face {
+    	font-family: JosefinSans;
+    	src: url(JosefinSans-Light.woff);
+    	font-weight: 200;
+	}
+
+	
+	</style>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
 
     <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet">
+    <link href="css/new-age.css" rel="stylesheet">
+    <link href="css/new-age.css" rel="stylesheet">
+
+  		<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+	<script type="text/javascript" src="css/slick.js"></script>
+
+ 	<script type="text/javascript">
+ 		var $jq = jQuery.noConflict()
+    	$jq(document).ready(function(){   			
+    		$jq('.your-class').slick({
+    			slidesToShow: 2,
+    			slidesToScroll: 1,    			 
+    			 inifinite:true,
+    			 centerMode:true
+    		})
+    	});
+	  </script>
+
   </head>
 
-  <body class="text-center">
+  <body id="page-top">
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">Cover</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Contact</a>
-          </nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">WOMAN AT THE WELL</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#download">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#features">Testimonies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Donations</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
-      </header>
+      </div>
+    </nav>
 
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading">Cover your page.</h1>
-        <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-        <p class="lead">
-          <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-        </p>
-      </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <header class="masthead">
+      <div class="container">
+      	
+        <div class="row">
+          <div class="col-lg-5 my-auto">          	
+            <div class="header-content mx-auto">            	
+              <h1 class="mb-5" style="">If you knew the gift of God and who it is that ask you for a drink, you would have asked him and he would have given you living water.              	
+              <hr style = 'margin:0px;margin-top:20px;margin-bottom:16px; max-width:250px'/>
+              <div style="font-size:40px;opacity: 0.7;" >John 4:10</div>              	              
+              </h1>
+              
+              
+              <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">About us</a>
+            </div>
+          </div>          
         </div>
-      </footer>
-    </div>
+      </div>
+    </header>
 
+    <section class="download bg-primary text-center" id="download">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mx-auto" style="border:solid 4px white;padding-top:100px; padding-bottom:80px">
+            <h2 class="section-heading">- WOMAN AT THE WELL -</h2>            
+            <p>is dedicated to discipling women through<br/>the teaching of biblical principles</p>
+            <br/>
+            <p>Our hope is to see Women filled with joy and<br/>God's love to be a positive influence for their<br/>families and the larger community of believers</p>            
+          </div>
+        </div>
+      </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../../../dist/js/bootstrap.min.js"></script>
+    </section>
+
+	
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-heading text-center">        	 
+                <h2 style="40px;font-weight:200">PHOTOS</h2> 
+                <div style='padding-top:60px'</div>
+                	<div class="your-class">
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+      		<div><img src="test.png" width=480/></div>
+    	</div>         
+ 	 	</div>
+      </div>        
+    </section>
+
+    <section class="cta">
+      <div class="cta-content">
+        <div class="container">
+          <h2>Stop waiting.<br>Start building.</h2>
+          <a href="#contact" class="btn btn-outline btn-xl js-scroll-trigger">Let's Get Started!</a>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </section>
+
+    <section class="contact bg-primary" id="contact">
+      <div class="container">
+        <h2>We
+          <i class="fa fa-heart"></i>
+          new friends!</h2>
+        <ul class="list-inline list-social">
+          <li class="list-inline-item social-twitter">
+            <a href="#">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item social-facebook">
+            <a href="#">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li class="list-inline-item social-google-plus">
+            <a href="#">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; Your Website 2018. All Rights Reserved.</p>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="#">Privacy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Terms</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/new-age.min.js"></script>
+
   </body>
+
 </html>
