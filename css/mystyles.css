@@ -324,7 +324,7 @@ section.cta2 .cta2-content h2 {
   color: white;
 }
 
-section.cta {
+section.donations {
   position: relative;
   padding: 250px 0;
   background-image: url("../bg.png");
@@ -335,12 +335,12 @@ section.cta {
   background-size: cover;
 }
 
-section.cta .cta-content {
+section.donations .cta-content {
   position: relative;
   z-index: 1;
 }
 
-section.cta .cta-content h2 {
+section.donations .cta-content h2 {
   font-size: 50px;
   max-width: 600px;
   margin-top: 0;
@@ -363,7 +363,7 @@ section.cta2 .overlay2 {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-section.cta .overlay {
+section.donations .overlay {
   position: absolute;
   top: 0;
   left: 0;
