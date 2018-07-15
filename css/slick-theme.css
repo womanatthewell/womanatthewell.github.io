@@ -1,4 +1,4 @@
-@charset 'UTF-8';
+j@charset 'UTF-8';
 /* Slider */
 .slick-loading .slick-list
 {
@@ -13,7 +13,7 @@
     font-style: normal;
 
     src: url('css/slick.eot');
-    src: url('css/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
+    src: url('css/slick.eot?#iefix') format('embedded-opentype'), url('css/slick.woff') format('woff'), url('css/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
 /* Arrows */
 .slick-prev,
@@ -27,19 +27,18 @@
 
     display: block;
 
-    width: 40px;
-    height: 40px;
-    padding: 0;
+    width: 80px;
+    height: 80px;
+    padding: 0 0px;    
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
 
     cursor: pointer;
 
-    color: red;
+    color: #a87eb9;;
     border: none;
-    outline: none;
-    background: transparent;
+    outline: none;        
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -49,6 +48,8 @@
     color: transparent;
     outline: none;
     background: transparent;
+    color: #C78EDE;
+    border-radius:40px;
 }
 .slick-prev:hover:before,
 .slick-prev:focus:before,
@@ -67,11 +68,12 @@
 .slick-next:before
 {
     font-family: 'slick';
-    font-size: 40px;
-    line-height: 1;
+    font-size: 100px;
+    font-weight:bold;
+    line-height: 0;
 
     opacity: .75;
-    color: red;
+    color: #a87eb9;;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -79,38 +81,38 @@
 
 .slick-prev
 {
-    left: -45px;
+    left: -100px;    
 }
 [dir='rtl'] .slick-prev
 {
-    right: -45px;
+    right: -100px;
     left: auto;
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '\2039';
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '\203A';
 }
 
 .slick-next
 {
-    right: -45px;
+    right: -100px;
 }
 [dir='rtl'] .slick-next
 {
     right: auto;
-    left: -45px;
+    left: -100px;
 }
 .slick-next:before
 {
-    content: '→';
+    content: '\203A';
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: '\2039';
 }
 
 /* Dots */
