@@ -46,10 +46,13 @@
 	.avatar {
   object-fit: cover;
   border-radius:50%;
-  width: 200px;
-  height: 200px;
-  border:solid 6px white;
-  margin-top:20px;
+  width: 170px;
+  height: 170px;
+  border:solid 8px white;
+}
+
+.bio-section {
+position:relative
 }
 	</style>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -67,6 +70,7 @@
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
 	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 	<script type="text/javascript" src="css/slick.js"></script>
+	<script type="text/javascript" src="anime.min.js"></script>
 
  	<script type="text/javascript">
  		var $jq = jQuery.noConflict()
@@ -76,7 +80,33 @@
     			slidesToScroll: 1,    			 
     			 inifinite:true,
     			 centerMode:true
-    		})
+    		});
+
+		var showingId = 'hai'
+		$jq('.avatar').click(function() {
+		  id = $(this).attr('id') 
+		  if (!(id === showingId)) {
+		    var q1 = '.bio-section#' + showingId 
+		    var q2 = '.bio-section#' + id 
+		   
+		   $('#' + showingId).removeClass('active-avatar')
+		   $('#' + id).addClass('active-avatar')
+ 
+		    showingId = id
+		    
+		    $jq(q1).hide()
+		    $jq(q2).show()
+
+		    anime({
+			targets:q2,
+			opacity:[0,1],
+			translateX:[100,0] 
+		    })
+		}
+		})
+
+		$jq('#hai').addClass('active-avatar')
+		$jq('.bio-section#hai').show() 
     	});
 	  </script>
 
@@ -194,28 +224,39 @@
 
     <section class="bg-primary text-left">      
       <div class="container">
-        <h2 class="section-heading" style='font-size:70px;color:white;margin-left:0px;padding-left:0px'>Meet the team.</h2>
-        <div class="row">                      
-            <div style='padding:20px;padding-left:0px'>
-              <img class='avatar' src='avatar1.png'></img>                                          
+	<div class="row">
+		<div class='col-lg-12'>
+        <h2 class="section-heading" style='font-size:70px;color:white;'>Meet the team.</h2>
+       		</div>	
+	</div> 
+	<div class="row" style='margin-top:20px'>
+            <div class='col-lg-2'>
+               <img class='avatar' src='avatar1.png' id='hai'></img>                                          
+            </div>
+            <div class='col-lg-2'>
+              <img class='avatar' src='avatar2.png' id='trang'></img>                                          
             </div>          
-            <div style='padding:20px'>
-              <img class='avatar' src='avatar2.png'></img>                                          
-            </div>          
-            <div style='padding:20px'>
-              <img class='avatar' src='avatar3.png'></img>                                          
+            <div class='col-lg-2'>
+              <img class='avatar' src='avatar3.png' id='chi'></img>                                          
             </div>          
         </div>
         <div class="row" style='min-height: 60px'>                      
         </div>
+
+
+	<div id="hai" class='bio-section' style='display:none'>
         <div class="row">          
+        	<div class='col-lg-12'>
             <h3 style='font-weight:600;font-size:40px;color:white'>HAI THI VU</h3>            
+	      </div>
         </div>
         <div class="row">
+        	<div class='col-lg-12'>
           <h4 style='font-size:30px;color:white'>Ministry Director</h4>
+        	</div>
         </div>
         <div class="row" style="margin-top:16px">
-          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8;margin-left:0px;padding-left:0px'>
+          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8'>
             Hai Vu loves living in big cities! She grew up in Saigon, the capital of southern Vietnam, before  immigrating to the United States in 1984. She rooted herself in the greater Seattle area for the past 32 years and enjoyed a fruitful time in raising her family and is now being a joyful grandmother to 5 beautiful grandchildren. 
 
             <p style='margin-top:23px'>            
@@ -225,11 +266,68 @@
           
           <div class="col-lg-1">
           </div>
-          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8;padding-left: 0px'>
+          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8;'>
            He strengthened her faith and provided her the ability to connect across generations, cultures, & family types. When Hai is not serving women, she enjoys spending time with her family, reading God’s word, and making beautiful cross-stitching designs. 
           </div>
         </div>
-      </div>
+	</div>
+      
+	<div id="trang" class='bio-section' style='display:none'>
+        <div class="row">          
+        	<div class='col-lg-12'>
+            <h3 style='font-weight:600;font-size:40px;color:white'>TRANG LE</h3>            
+	      </div>
+        </div>
+        <div class="row">
+        	<div class='col-lg-12'>
+          <h4 style='font-size:30px;color:white'>Secretary</h4>
+        	</div>
+        </div>
+        <div class="row" style="margin-top:16px">
+          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8'>
+            Hai Vu loves living in big cities! She grew up in Saigon, the capital of southern Vietnam, before  immigrating to the United States in 1984. She rooted herself in the greater Seattle area for the past 32 years and enjoyed a fruitful time in raising her family and is now being a joyful grandmother to 5 beautiful grandchildren. 
+
+            <p style='margin-top:23px'>            
+             She found a passion for God’s Word and was inspired by His love to serve women with a beautiful experience of sharing a meal, learning God’s Word, and supporting each other through prayers. God gave her a big dream for starting Woman at the Well and opened a door for the ministry to be established in 2016. 
+           </p>
+          </div>
+          
+          <div class="col-lg-1">
+          </div>
+          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8;'>
+           He strengthened her faith and provided her the ability to connect across generations, cultures, & family types. When Hai is not serving women, she enjoys spending time with her family, reading God’s word, and making beautiful cross-stitching designs. 
+          </div>
+        </div>
+	</div>
+
+	<div id="chi" class='bio-section' style='display:none'>
+        <div class="row">          
+        	<div class='col-lg-12'>
+            <h3 style='font-weight:600;font-size:40px;color:white'>CHI HOANG</h3>            
+	      </div>
+        </div>
+        <div class="row">
+        	<div class='col-lg-12'>
+          <h4 style='font-size:30px;color:white'>Treasurer</h4>
+        	</div>
+        </div>
+        <div class="row" style="margin-top:16px">
+          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8'>
+            Hai Vu loves living in big cities! She grew up in Saigon, the capital of southern Vietnam, before  immigrating to the United States in 1984. She rooted herself in the greater Seattle area for the past 32 years and enjoyed a fruitful time in raising her family and is now being a joyful grandmother to 5 beautiful grandchildren. 
+
+            <p style='margin-top:23px'>            
+             She found a passion for God’s Word and was inspired by His love to serve women with a beautiful experience of sharing a meal, learning God’s Word, and supporting each other through prayers. God gave her a big dream for starting Woman at the Well and opened a door for the ministry to be established in 2016. 
+           </p>
+          </div>
+          
+          <div class="col-lg-1">
+          </div>
+          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8;'>
+           He strengthened her faith and provided her the ability to connect across generations, cultures, & family types. When Hai is not serving women, she enjoys spending time with her family, reading God’s word, and making beautiful cross-stitching designs. 
+          </div>
+        </div>
+	</div>
+	</div>
     </section>
 
     <section class="donations" id="donations">
