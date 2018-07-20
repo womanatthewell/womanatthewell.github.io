@@ -45,6 +45,11 @@ hr {
   border-color: rgba(34, 34, 34, 0.1);
 }
 
+@media (min-width: 992px) {
+hr {
+  margin:0px
+}
+}
 hr.light {
   border-color: white;
 }
@@ -174,7 +179,7 @@ header.masthead {
   padding-top: 150px;
   padding-bottom: 100px;
 
-  background-image: url("../logo.png");
+  background-image: url("../bglogosmall.png");
   background-position: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -208,6 +213,7 @@ header.masthead .device-container .screen img {
 
 @media (min-width: 992px) {
   header.masthead {    
+    background-image: url("../logo.png");
     min-height: 850px;
     padding-top: 300px;
     padding-bottom: 0;
@@ -228,7 +234,7 @@ header.masthead .device-container .screen img {
 
 section.download {
   position: relative;
-  padding: 80px 80px;
+  padding: 80px 20px;
 }
 
 section.download h2 {
@@ -239,7 +245,15 @@ section.download h2 {
 
 section.download p {
   color:white;
-  font-size:24px;
+  font-size:18px;
+  max-width:320px
+}
+
+@media(min-width:992px) {
+	section.download p {
+  		font-size:26px;
+		max-width:500px
+	}
 }
 
 section.download .badges .badge-link {
@@ -256,25 +270,47 @@ section.download .badges .badge-link img {
 }
 
 @media (min-width: 768px) {
+  header.masthead {    
+
+  }
+
   section.download .badges .badge-link {
     display: inline-block;
     margin-bottom: 0;
   }
 }
 
-@media (min-width: 768px) {
+section.download h2 {
+    color:white;
+    font-size:30px;
+    text-align:center;
+}
+
+@media (min-width: 992px) {
   section.download h2 {
     font-size: 55px;
-    color:white;
   }
 }
 
 section.features .section-heading {
-  margin-bottom: 100px;
+  margin-bottom: 0px;
 }
 
 section.features .section-heading h2 {
+ font-size:45px;
   margin-top: 0;
+}
+
+.responsive {
+   width:100%;
+   max-width:1100px;
+   height:auto;
+}
+
+@media(min-width:992px) {
+section.features .section-heading h2 {
+ font-size:60px;
+}
 }
 
 section.features .section-heading p {
@@ -336,11 +372,29 @@ section.cta2 .cta2-content {
 }
 
 section.cta2 .cta2-content h2 {
-  font-size: 50px;
-  max-width: 450px;
+  font-size: 45px;
   margin-top: 0;
   margin-bottom: 25px;
   color: white;
+  text-align:center;
+
+}
+
+section.cta2 .cta2-content h3 {
+  font-size: 24px;
+
+}
+
+@media(min-width:992px) {
+section.cta2 .cta2-content h2 {
+  font-size: 60px;
+
+}
+
+section.cta2 .cta2-content h3 {
+  font-size: 30px;
+
+}
 }
 
 section.donations {
@@ -360,11 +414,23 @@ section.donations .cta-content {
 }
 
 section.donations .cta-content h2 {
+  font-size: 40px;
+  max-width: 600px;
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: white;
+}
+
+@media (min-width: 450px) {
+section.donations .cta-content h2 {
   font-size: 50px;
   max-width: 600px;
   margin-top: 0;
   margin-bottom: 25px;
   color: white;
+}
+
+
 }
 
 @media (min-width: 768px) {
@@ -398,6 +464,18 @@ section.contact {
 section.contact h2 {
   margin-top: 0;
   margin-bottom: 25px;
+  font-size:38px
+}
+
+@media(min-width:508px) {
+  section.contact h2 {
+    font-size:60px; 
+  }
+}
+@media(min-width:508px) {
+h2#team {
+  font-size:70px;
+}
 }
 
 section.contact h2 i {

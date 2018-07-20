@@ -17,7 +17,7 @@
 	<meta http-equiv="Expires" content="0" />
 
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no, maximum-scale=1, minimum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -46,13 +46,40 @@
 	.avatar {
   object-fit: cover;
   border-radius:50%;
+  width: 80px;
+  height: 80px;
+  border:solid 4px white;
+  margin-left:20px;
+}
+
+@media(min-width:440px) {
+	.avatar {
+  width: 120px;
+  height: 120px;
+  border:solid 6px white;
+}
+}
+@media(min-width:780px) {
+	.avatar {
+  object-fit: cover;
+  border-radius:50%;
   width: 170px;
   height: 170px;
   border:solid 8px white;
+  margin-right:20px;
+}
 }
 
 .bio-section {
-position:relative
+position:relative;
+}
+.paragraph {
+font-size:18px;
+}
+@media(min-width:992px) {
+.paragraph {
+font-size:26px;
+}
 }
 	</style>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
@@ -67,21 +94,27 @@ position:relative
 
   		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 	  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
-	<script type="text/javascript" src="css/slick.js"></script>
 	<script type="text/javascript" src="anime.min.js"></script>
 
  	<script type="text/javascript">
  		var $jq = jQuery.noConflict()
-    	$jq(document).ready(function(){   			
-    		$jq('.your-class').slick({
-    			slidesToShow: 2,
-    			slidesToScroll: 1,    			 
-    			 inifinite:true,
-    			 centerMode:true
-    		});
+    	$jq(document).ready(function(){
 
+	var w = $jq(window).width();	
+	if (w <  768) {
+	   $jq('.responsive').attr('src','photoalbumsmall.png'); 
+	} else {
+	   $jq('.responsive').attr('src','photoalbum.png'); 
+	}
+    $jq(window).resize(function() {
+	var w = $jq(window).width();	
+	if (w <  768) {
+	   $jq('.responsive').attr('src','photoalbumsmall.png'); 
+	} else {
+	   $jq('.responsive').attr('src','photoalbum.png'); 
+	}
+
+    })
 		var showingId = 'hai'
 		$jq('.avatar').click(function() {
 		  id = $(this).attr('id') 
@@ -128,7 +161,7 @@ position:relative
               <a class="nav-link js-scroll-trigger" href="#download">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#features">Testimonies</a>
+              <a class="nav-link js-scroll-trigger" href="#features">PHOTOS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#donations">Donations</a>
@@ -148,7 +181,7 @@ position:relative
           <div class="col-lg-5 my-auto">          	
             <div class="header-content mx-auto">            	
               <h1 class="mb-5" style="">If you knew the gift of God and who it is that ask you for a drink, you would have asked him and he would have given you living water.              	
-              <hr style = 'margin:0px;margin-top:20px;margin-bottom:16px; max-width:250px'/>
+              <hr style = 'margin-top:20px;margin-bottom:16px; max-width:250px'/>
               <div style="font-size:40px;opacity: 0.7;" >John 4:10</div>              	              
               </h1>
               
@@ -163,11 +196,13 @@ position:relative
     <section class="download bg-primary text-center" id="download">
       <div class="container">
         <div class="row">
-          <div class="col-md-12 mx-auto" style="border:solid 4px white;padding-top:120px; padding-bottom:95px; border-radius:10px">
+          <div class="col-lg-12" style="border:solid 4px rgba(255,255,255,0.8);padding:12px;padding-top:80px; padding-bottom:80px; border-radius:10px">
             <h2 class="section-heading">- WOMAN AT THE WELL -</h2>            
-            <p style='margin-top:15px;font-size:26px'>is dedicated to discipling women through<br/>the teaching of biblical principles</p>
+            <p style='margin-top:15px;margin:auto'>is dedicated to discipling women through the teaching of biblical principles</p>
             <br/>
-            <p style='font-size:26px'>Our hope is to see Women filled with joy and<br/>God's love to be a positive influence for their<br/>families and the larger community of believers</p>            
+            <p style='margin:auto'>Our hope is to see Women filled with joy and
+	   God's love to be a positive influence for their
+	   families and the larger community of believers</p>            
           </div>
         </div>
       </div>
@@ -179,18 +214,28 @@ position:relative
         <div class="container">
           <div class = 'row align-items-center'>
             <div class='col-lg-4 mx-auto'>
-              <h2 style="font-size:60px; color: black; opacity:0.8">OUR STORY</h2> 
+              <h2 style="color: black; opacity:0.8">OUR STORY</h2> 
             </div>            
             <div class='col-lg-1 my-auto'></div>
             <div class='col-lg-7 my-auto'>
               <div style='background-color:rgba(255,255,255,0.8);padding:50px;border-radius:20px; '>
                   <h3 style='font-weight:600'>IN THE BEGINNING</h3>
-                  <p style='font-size:24px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-                  <p style='font-size:24px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                     <p style='font-size:24px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conse.</p>
+<p class="paragraph">
+Woman at the Well began in 2016 when Hai Vu and Chi Hoang were compelled by the same hope: to see women break through personal barriers and become faithful and confident women of God, who would powerfully impact their communities. 
+</p>
 
-                     <p style='font-size:24px'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo conse.</p>
+<p class="paragraph">
+An inspiration came through the Revelations 3:20 initiation from God, who stands at the door and knocks, and if anyone hears His voice and opens the door, He will come in and eat with that person and they with Him (NIV). Handcrafted invitations were sent out as knocks on the hearts of women who God had given them to pray for and formal luncheons were served, delightfully decorated and encouragingly exquisite. 
+</p>
+
+<p class="paragraph">
+Over time, different women came together and were prompted to dress up beautifully as God’s beloved and fellowship as friends sharing a meal. Beginning with affirming grandmothers, then to bridging intergenerational women, to now also connecting women across culture and race, what started as a small gathering has now become an organization that intentionally works to build up all women in the love of God. 
+</p>
+
+<p class="paragraph"> 
+Like Hai and Chi, Trang Le, one of the first attendee, also experienced the deep love of Jesus who sees and knows every blemish, thirst, and painful past experiences, yet fully accepts us and offers us a living water that never runs dry and always satisfies. And like the Samaritan woman at the well, the three were not only given new life but transformed in such a way that compels them to serve women with the same love (John 4:1-42). 
+</p>
               </div>              
             </div>
           </div>
@@ -202,21 +247,11 @@ position:relative
     <section class="features" id="features">
       <div class="container">
         <div class="section-heading text-center" style="">        	 
-                <h2 style="font-size:60px;font-weight:200">PHOTOS</h2> 
-                <div style='padding-top:60px'</div>
+                <h2 style="font-weight:200">PHOTOS</h2> 
+                <div style='padding-top:40px'></div>
                 	<div class="your-class">
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
-      		<div><img src="test.png" width=480/></div>
+<div style='width:100%'><a href="https://photos.app.goo.gl/Pp76rzeT1dWaXKHN6" target="_blank">
+	<img src='photoalbum.png' class='responsive'></a></div>
     	</div>         
  	 	</div>
       </div>        
@@ -226,20 +261,12 @@ position:relative
       <div class="container">
 	<div class="row">
 		<div class='col-lg-12'>
-        <h2 class="section-heading" style='font-size:70px;color:white;'>Meet the team.</h2>
+        <h2 class="section-heading" id="team" style='color:white;'>Meet the team.</h2>
        		</div>	
 	</div> 
 	<div class="row" style='margin-top:20px'>
-            <div class='col-lg-2'>
-               <img class='avatar' src='avatar1.png' id='hai'></img>                                          
-            </div>
-            <div class='col-lg-2'>
-              <img class='avatar' src='avatar2.png' id='trang'></img>                                          
-            </div>          
-            <div class='col-lg-2'>
-              <img class='avatar' src='avatar3.png' id='chi'></img>                                          
-            </div>          
-        </div>
+              <img class='avatar' src='avatar1.png' id='hai'></img>                                          		<img class='avatar' src='avatar2.png' id='trang'></img>                                          	       <img class='avatar' src='avatar3.png' id='chi'></img>                                          
+	</div>
         <div class="row" style='min-height: 60px'>                      
         </div>
 
@@ -255,19 +282,20 @@ position:relative
           <h4 style='font-size:30px;color:white'>Ministry Director</h4>
         	</div>
         </div>
-        <div class="row" style="margin-top:16px">
-          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8'>
-            Hai Vu loves living in big cities! She grew up in Saigon, the capital of southern Vietnam, before  immigrating to the United States in 1984. She rooted herself in the greater Seattle area for the past 32 years and enjoyed a fruitful time in raising her family and is now being a joyful grandmother to 5 beautiful grandchildren. 
-
-            <p style='margin-top:23px'>            
-             She found a passion for God’s Word and was inspired by His love to serve women with a beautiful experience of sharing a meal, learning God’s Word, and supporting each other through prayers. God gave her a big dream for starting Woman at the Well and opened a door for the ministry to be established in 2016. 
-           </p>
+        <div class="row" style="margin-top:0px">
+          <div class="col-lg-5 paragraph" style='margin-top:12px;color:white;opacity:0.8'>
+Hai loves living in big cities! She grew up in Saigon, Vietnam, before immigrating to the US in 1984. She rooted herself in Bellevue, WA for over 
+32 years. Hai is a joyful grandmother to 5 beautiful grandchildren. 
+She was inspired by God’s love to serve women with a beautiful experience of sharing a meal, 
+learning God’s Word, and supporting each other through prayer. 
           </div>
           
           <div class="col-lg-1">
           </div>
-          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8;'>
-           He strengthened her faith and provided her the ability to connect across generations, cultures, & family types. When Hai is not serving women, she enjoys spending time with her family, reading God’s word, and making beautiful cross-stitching designs. 
+          <div class="col-lg-5 paragraph" style='margin-top:12px;color:white;opacity:0.8;'>
+God ignited a big dream for starting Woman at the Well which came into fruition in 2016. 
+He strengthened her faith and provided her the ability to connect across generations, cultures, & family types. 
+When Hai is not serving women, she enjoys spending time with her family, reading God’s word, and making beautiful cross-stitching designs.  
           </div>
         </div>
 	</div>
@@ -283,19 +311,16 @@ position:relative
           <h4 style='font-size:30px;color:white'>Secretary</h4>
         	</div>
         </div>
-        <div class="row" style="margin-top:16px">
-          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8'>
-            Hai Vu loves living in big cities! She grew up in Saigon, the capital of southern Vietnam, before  immigrating to the United States in 1984. She rooted herself in the greater Seattle area for the past 32 years and enjoyed a fruitful time in raising her family and is now being a joyful grandmother to 5 beautiful grandchildren. 
-
-            <p style='margin-top:23px'>            
-             She found a passion for God’s Word and was inspired by His love to serve women with a beautiful experience of sharing a meal, learning God’s Word, and supporting each other through prayers. God gave her a big dream for starting Woman at the Well and opened a door for the ministry to be established in 2016. 
-           </p>
+        <div class="row" style="margin-top:0px">
+          <div class="col-lg-5 paragraph" style='margin-top:12px;color:white;opacity:0.8'>
+Trang can be distinguished by her contagious laughter and creative storytelling. As a child, she loved reading all types of books and dreamed of being a writer one day. When she was saved, Jesus filled her life with the all-time greatest story: The Gospel of His Redeeming Love! 
+She enjoys working alongside others to build up the next generation, support families, and promote health for communities. 
           </div>
           
           <div class="col-lg-1">
           </div>
-          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8;'>
-           He strengthened her faith and provided her the ability to connect across generations, cultures, & family types. When Hai is not serving women, she enjoys spending time with her family, reading God’s word, and making beautiful cross-stitching designs. 
+          <div class="col-lg-5 paragraph" style='margin-top:12px;color:white;opacity:0.8;'>
+In her spare time, she likes to explore the outdoors on feet as an avid runner, cook experimentally, and read biographies. God graciously opened doors for her to serve, learn and grow with the Woman at the Well ministry since 2016.  
           </div>
         </div>
 	</div>
@@ -312,18 +337,17 @@ position:relative
         	</div>
         </div>
         <div class="row" style="margin-top:16px">
-          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8'>
-            Hai Vu loves living in big cities! She grew up in Saigon, the capital of southern Vietnam, before  immigrating to the United States in 1984. She rooted herself in the greater Seattle area for the past 32 years and enjoyed a fruitful time in raising her family and is now being a joyful grandmother to 5 beautiful grandchildren. 
-
-            <p style='margin-top:23px'>            
-             She found a passion for God’s Word and was inspired by His love to serve women with a beautiful experience of sharing a meal, learning God’s Word, and supporting each other through prayers. God gave her a big dream for starting Woman at the Well and opened a door for the ministry to be established in 2016. 
-           </p>
+          <div class="col-lg-5 paragraph" style='margin-top:12px;color:white;opacity:0.8'>
+Chi is a community worker with passions for education, design, and nature. 
+She enjoys working on creative collaboration projects and eating noodle soups. 
+Since coming to believe in Jesus as a youth, she has loved the adventure of working with various churches, communities,  
+and organizations in exploring and seeing the unfolding of the “mystery of His will according to His good pleasure, which God proposed in Christ” (Ephesians 1:9).
+She has worked with Woman at the Well since it started in 2016. 
           </div>
           
           <div class="col-lg-1">
           </div>
-          <div class="col-lg-5" style='font-size:24px;color:white;opacity:0.8;'>
-           He strengthened her faith and provided her the ability to connect across generations, cultures, & family types. When Hai is not serving women, she enjoys spending time with her family, reading God’s word, and making beautiful cross-stitching designs. 
+          <div class="col-lg-5 paragraph" style='margin-top:12px;color:white;opacity:0.8;'>
           </div>
         </div>
 	</div>
@@ -333,8 +357,8 @@ position:relative
     <section class="donations" id="donations">
       <div class="cta-content">
         <div class="container">
-          <h2 style='margin-bottom:8px'>Help support us.</h2>
-          <p style='color:white;font-size:28px;max-width:540px;padding-bottom:20px;padding-top:0px;opacity:0.8'>Some blurb on what you need funding for. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q</p>
+          <h2 style='margin-bottom:8px'>Help support us</h2>
+          <p style='color:white;font-size:28px;max-width:540px;padding-bottom:20px;padding-top:0px;opacity:0.8'>Support our ministry work with women</p>
          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="ZNVE7DJJNFXUQ">
@@ -351,12 +375,12 @@ position:relative
         <h2 style='color:white'>Connect with us!</h2>
         <ul class="list-inline list-social">
           <li class="list-inline-item social-twitter">
-            <a href="mailto:Johnwatw@gmail.com">
+            <a href="mailto:John4watw@gmail.com">
               <i class="fa fa-envelope"></i>
             </a>
           </li>
           <li class="list-inline-item social-facebook">
-            <a href="https://www.facebook.com" target="_blank">
+            <a href="https://www.facebook.com/Woman-at-the-Well-1234315490030771/" target="_blank">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
