@@ -97,16 +97,20 @@ font-size:26px;
 
 	var w = $jq(window).width();	
 	if (w <  768) {
-	   $jq('.responsive').attr('src','photoalbumsmall.png'); 
+	   $jq('.photo').attr('src','photoalbumsmall.png'); 
+	   $jq('.event').attr('src','eventbanner.jpg'); 
 	} else {
-	   $jq('.responsive').attr('src','photoalbum.png'); 
+	   $jq('.photo').attr('src','photoalbum.png'); 
+	   $jq('.event').attr('src','eventbanner.jpg'); 
 	}
     $jq(window).resize(function() {
 	var w = $jq(window).width();	
 	if (w <  768) {
-	   $jq('.responsive').attr('src','photoalbumsmall.png'); 
+	   $jq('.photo').attr('src','photoalbumsmall.png'); 
+	   $jq('.event').attr('src','eventbanner.jpg'); 
 	} else {
-	   $jq('.responsive').attr('src','photoalbum.png'); 
+	   $jq('.photo').attr('src','photoalbum.png'); 
+	   $jq('.event').attr('src','eventbanner.jpg'); 
 	}
 
     })
@@ -188,6 +192,19 @@ font-size:26px;
       </div>
     </header>
 
+
+    <section class="" id="event">
+      <div class="container">
+        <div class="section-heading text-center" style="">                           
+                <div style='padding-top:40px'></div>
+                  <div class="your-class">
+<div style='width:100%'><a href="https://www.google.com" target="_blank">
+  <img src='eventbanner.jpg' class='event responsive'></a></div>
+      </div>         
+    </div>
+      </div>        
+    </section>
+
     <section class="download bg-primary text-center" id="download">
       <div class="container">
         <div class="row">
@@ -242,7 +259,7 @@ Like Hai and Chi, Trang Le, one of the first attendee, also experienced the deep
                 <div style='padding-top:40px'></div>
                 	<div class="your-class">
 <div style='width:100%'><a href="https://photos.app.goo.gl/Pp76rzeT1dWaXKHN6" target="_blank">
-	<img src='photoalbum.png' class='responsive'></a></div>
+	<img src='photoalbum.png' class='photo responsive'></a></div>
     	</div>         
  	 	</div>
       </div>        
